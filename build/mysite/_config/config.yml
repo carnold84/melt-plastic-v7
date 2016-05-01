@@ -1,0 +1,27 @@
+---
+Name: mysite
+After:
+  - 'framework/*'
+  - 'cms/*'
+---
+# YAML configuration for SilverStripe
+# See http://doc.silverstripe.org/framework/en/topics/configuration
+# Caution: Indentation through two spaces, not tabs
+SSViewer:
+  theme: 'melt-plastic'
+  
+---
+After: 'silverstripe-responsive-images/*'
+---
+ResponsiveImageExtension:
+  sets:
+    ResponsiveSet1:
+      sizes:
+        - {query: "(min-width: 700px)", size: 900}
+        - {query: "(min-width: 480px)", size: 700}
+        - {query: "(min-width: 320px)", size: 480}
+        
+SVGTemplate:
+  base_path: 'themes/melt-plastic/images/'
+  default_extra_classes:
+    - 'svg'
