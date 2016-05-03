@@ -1,7 +1,10 @@
     <div class="item with-bg">
 
         <a href="$Link">
-            <img class="item__image" src="$Thumb.URL" alt="$Title" />
+        
+            <div class="item__image">
+                $Thumb.ResponsiveSet1
+            </div>
 
             <div class="item__content">
 
@@ -9,13 +12,11 @@
 
                 <p class="item__metadata">
 
-                    Tags:
-
                     <% if $Tags %>
 
                         <% loop $Tags %>
 
-                            $Title
+                            $Title<% if $Pos != $TotalItems %>,<% end_if %>
 
                         <% end_loop %>
 

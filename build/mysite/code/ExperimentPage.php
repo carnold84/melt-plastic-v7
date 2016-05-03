@@ -16,6 +16,8 @@ class ExperimentPage extends Page {
     private static $many_many = array(
         'Tags' => 'Tag'
     );
+    
+    private static $can_be_root = false;
 	
 	public function getCMSFields() {
         

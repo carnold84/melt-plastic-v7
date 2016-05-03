@@ -19,6 +19,8 @@ class ProjectPage extends Page {
     private static $many_many_extraFields = array(
         'Images' => array('SortOrder' => 'Int')
     );
+    
+    private static $can_be_root = false;
 	
 	public function getCMSFields() {
         
