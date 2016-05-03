@@ -18,6 +18,8 @@ class ExperimentPage extends Page {
     );
     
     private static $can_be_root = false;
+    
+    private static $description = 'Page to display a URL in an iframe.';
 	
 	public function getCMSFields() {
         

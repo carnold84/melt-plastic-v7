@@ -21,6 +21,8 @@ class ProjectPage extends Page {
     );
     
     private static $can_be_root = false;
+    
+    private static $description = 'Page to display description and images of a project.';
 	
 	public function getCMSFields() {
         
