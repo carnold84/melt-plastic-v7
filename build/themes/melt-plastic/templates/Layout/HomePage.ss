@@ -1,137 +1,41 @@
-<section class="main-content has-banner">
-        
-    <!-- .main-banner starts -->
-    <div class="main-banner">
+<section class="main-content">
 
-        <!-- .main-banner__content starts -->
-        <div class="main-banner__content">
+    <header class="section-header is-dark">
 
-            <!-- .main-banner__inner starts -->
-            <div class="main-banner__inner">
+        <h2 class="section-header__title">Latest</h2>
 
-                <h1 class="main-banner__title">
-                    <span>Purveyor of fine digital goods.</span>
-                </h1>
-
-            </div>
-            <!-- .main-banner__inner ends -->
-
-        </div>
-        <!-- .main-banner__inner ends -->
-
-    </div>
-    <!-- .main-banner ends -->
-        
-    <!-- .container starts -->
-    <div class="container">
-
-        <div class="row">
-
-            <!-- work column starts -->
-            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-
-                <header class="section-header">
-
-                    <h2 class="section-header__title">Work</h2>
-
-                    <hr class="section-hor-divider">
-
-                </header>
-
-                <div class="col-content">
+    </header>
                 
-                    <% if ListPagesByType('ProjectPage', 5) %>
-                    
-                        <% loop ListPagesByType('ProjectPage') %>
-                            
-                            <% include Project %>
-                            
-                        <% end_loop %>
-                        
-                    <% else %>
-                    
-                        <h3 class="message">Sorry, there is no work to view at the moment.</h3>
-                        
-                    <% end_if %>
+    <% if ListPagesByType('ProjectPage', 5) %>
 
-                </div>
+        <% loop ListPagesByType('ProjectPage') %>
 
-                <div class="clearfix"></div>
+            <% include Project %>
 
-            </div>
-            <!-- work column ends -->
+        <% end_loop %>
 
-            <!-- projects column starts -->
-            <div class="col-border-right col-lg-4 col-md-4 col-sm-6 col-xs-12">
+    <% end_if %>
 
-                <header class="section-header">
+    <% if ListPagesByType('ExperimentPage', 5) %>
 
-                    <h2 class="section-header__title">Projects</h2>
+        <% loop ListPagesByType('ExperimentPage') %>
 
-                    <hr class="section-hor-divider">
+            <% include Experiment %>
 
-                </header>
+        <% end_loop %>
 
-                <div class="col-content">
-                
-                    <% if ListPagesByType('ExperimentPage', 5) %>
-                    
-                        <% loop ListPagesByType('ExperimentPage') %>
-                            
-                            <% include Experiment %>
-                            
-                        <% end_loop %>
-                        
-                    <% else %>
-                    
-                        <h3 class="message">Sorry, there are no projects to view at the moment.</h3>
-                    
-                    <% end_if %>
+    <% end_if %>
 
-                </div>
+    <% if ListPagesByType('BlogPost', 5) %>
 
-                <div class="clearfix"></div>
+        <% loop ListPagesByType('BlogPost') %>
 
-            </div>
-            <!-- articles and news column ends -->
+            <% include PostSummary %>
 
-            <!-- articles and news column starts -->
-            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+        <% end_loop %>
 
-                <header class="section-header">
+    <% end_if %>
 
-                    <h2 class="section-header__title">Blog</h2>
-
-                    <hr class="section-hor-divider">
-
-                </header>
-
-                <div class="col-content">
-                
-                    <% if ListPagesByType('BlogPost', 5) %>
-                    
-                        <% loop ListPagesByType('BlogPost') %>
-                            
-                            <% include PostSummary %>
-                            
-                        <% end_loop %>
-                        
-                    <% else %>
-                    
-                        <h3 class="message">Sorry, there are no posts to view at the moment.</h3>
-                    
-                    <% end_if %>
-
-                </div>
-
-                <div class="clearfix"></div>
-
-            </div>
-            <!-- articles and news column ends -->
-
-        </div>
-
-    </div>
-    <!-- .container ends -->
+    <div class="clearfix"></div>
             
 </section>

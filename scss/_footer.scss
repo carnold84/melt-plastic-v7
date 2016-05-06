@@ -1,0 +1,87 @@
+.main-footer {
+    width: 100%;
+    font-family: 'Roboto Condensed', Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0 0 80px;
+    float: left;
+    display: block;
+}
+
+.main-footer__text {
+    font-size: 1.1em;
+    line-height: 1.1em;
+    color: #888888;
+    margin: 0 30px;
+    padding: 5px 0;
+    float: left;
+    clear: both;
+}
+
+.contact-links {
+    margin: 3px 0 40px 30px;
+    padding: 0;
+    float: left;
+
+    .email {
+
+        .svg {
+            fill: #777777;
+            margin: -3px 0 0;
+        }
+    }
+}
+
+.contact-links__item {
+    font-size: 1.5em;
+    line-height: 1em;
+    color: #888888;
+    margin: 0 20px 0 0;
+}
+
+.contact-social-links {
+    margin: 0 25px 40px 0;
+    padding: 0;
+    float: right;
+
+    .github, .twitter, .tumblr {
+
+        .svg {
+            fill: #777777;
+        }
+    }
+}
+
+.contact-social-links__item {
+    margin: 0 10px 0 0;
+}
+
+.contact-links__item, .contact-social-links__item {
+    display: inline-block;
+    
+    a {
+        color: #777777;
+        border-bottom: none;
+        
+        &:hover {
+            color: $global-focus-color;
+        }
+    }
+}
+
+@media (max-width: 640px) {
+
+    .main-footer__text {
+        margin: 0 18px;
+    }
+    
+    .contact-links {
+        float: left;
+        margin: 3px 0 20px 18px;
+    }
+
+    .contact-social-links {
+        float: left;
+        clear: left;
+        margin: 0 0 20px 18px;
+    }
+}

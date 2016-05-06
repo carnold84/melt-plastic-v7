@@ -10,17 +10,27 @@
         </button>
 
         <ul class="main-nav__links-list">
+        
             <% loop $Menu(1) %>
                 <li class="main-nav__item $LinkingMode"><a href="$Link" title="$Title.XML">$MenuTitle.XML</a></li>
             <% end_loop %>
             
-            <li class="main-nav__item">
-                <a class="github btn btn-primary" href="https://github.com/carnold84">$SVG('github') Github</a>
+        </ul>
+
+        <ul class="main-nav__social-links">
+            
+            <li class="main-nav__social-links__item icon github">
+                <a href="https://github.com/carnold84" title="Github">$SVG('github')</a>
             </li>
 
-            <li class="main-nav__item">
-                <a class="twitter btn btn-primary" href="https://twitter.com/meltplastic">$SVG('twitter') Twitter</a>
+            <li class="main-nav__social-links__item icon twitter">
+                <a href="https://twitter.com/meltplastic" title="Twitter">$SVG('twitter')</a>
             </li>
+
+            <li class="main-nav__social-links__item icon tumblr">
+                <a href="http://melt-plastic.tumblr.com" title="Tumblr">$SVG('tumblr')</a>
+            </li>
+            
         </ul>
 
     </div>

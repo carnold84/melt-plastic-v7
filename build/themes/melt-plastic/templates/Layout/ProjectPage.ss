@@ -5,31 +5,13 @@
 
         <header class="section-header">
 
-            <h2 class="section-header__title">Work.</h2>
+            <h2 class="section-header__title">$Title</h2>
 
-            <hr class="section-hor-divider">
-
-        </header>
-        
-        <div class="row">
-
-            <div class="col-md-12 col-xs-12">
-
-                <div class="col-content">
-
-                    <h1 class="page-title">$Title</h1>
-
-                    <div class="project-description">
-                        $Description
-                    </div>
-
-                </div>
-
-                <div class="clearfix"></div>
-
+            <div class="section-header__subtitle">
+                $Description
             </div>
 
-        </div>
+        </header>
         
         <% if $Images %>
                         

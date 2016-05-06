@@ -1,32 +1,38 @@
 <section class="main-content">
+
+    <header class="section-header">
+
+        <h2 class="section-header__title">$Title</h2>
         
-    <!-- .container starts -->
-    <div class="container">
-
-        <header class="section-header">
-
-            <h2 class="section-header__title">$Title</h2>
-
-            <hr class="section-hor-divider">
-
-        </header>
+        <% if $Summary %>
         
-        <article>
+        <h3 class="section-header__subtitle">$Summary</h3>
         
-            <% if $FeaturedImage %>
-                <p class="post-image">$FeaturedImage.setWidth(795)</p>
-            <% end_if %>
+        <% end_if %>
 
-            <div class="content">$Content</div>
+    </header>
+
+    <% if $FeaturedImage %>
+        <p class="post-image">$FeaturedImage.ResponsiveSet1</p>
+    <% end_if %>
+
+    <article class="blog-post__content">
+
+        <div class="blog-post__body">$Content</div>
+
+    </article>
+
+    <div class="blog-post__content">
+
+        <div class="blog-post__metadata">
 
             <% include EntryMeta %>
-            
-        </article>
 
-        $Form
-        $CommentsForm
-
+        </div>
+    
     </div>
-    <!-- .container ends -->
+
+    $Form
+    $CommentsForm
     
 </section>

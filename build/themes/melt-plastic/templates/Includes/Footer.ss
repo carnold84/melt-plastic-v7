@@ -1,47 +1,37 @@
 <!-- .main-footer starts -->
 <footer class="main-footer">
 
-    <!-- .container starts -->
-    <div class="container">
+    <div class="section-header is-dark">
 
-        <header class="section-header is-dark">
-
-            <h2 class="section-header__title">Contact</h2>
-
-            <hr class="section-hor-divider">
-
-        </header>
-
-        <div class="row">
-
-            <div class="col-md-12">
-
-                <p class="main-footer__contact-text"><a href="mailto:info@meltplastic.net">info@meltplastic.net</a></p>
-
-                <p class="main-footer__contact-text"><a href="https://github.com/carnold84">Github</a></p>
-
-                <p class="main-footer__contact-text"><a href="https://twitter.com/meltplastic">Twitter</a></p>
-
-                <p class="main-footer__contact-text"><a href="http://melt-plastic.tumblr.com">Tumblr</a></p>
-
-            </div>
-
-        </div>
-
-        <div class="row">
-
-            <div class="col-md-12">
-
-                <p class="main-footer__text">&copy; $SiteConfig.Title</p>
-
-                <div class="clearfix"></div>
-
-            </div>
-
-        </div>
+        <h2 class="section-header__title">Contact</h2>
 
     </div>
-    <!-- .container ends -->
+    
+    <ul class="contact-links">
+
+        <li class="contact-links__item icon email"><a href="mailto:info@meltplastic.net" title="Email info@meltplastic.net">info@meltplastic.net</a></li>
+    
+    </ul>
+    
+    <ul class="contact-social-links">
+
+        <li class="contact-social-links__item icon github">
+            <a href="https://github.com/carnold84" title="Github">$SVG('github')</a>
+        </li>
+
+        <li class="contact-social-links__item icon twitter">
+            <a href="https://twitter.com/meltplastic" title="Twitter">$SVG('twitter')</a>
+        </li>
+
+        <li class="contact-social-links__item icon tumblr">
+            <a href="http://melt-plastic.tumblr.com" title="Tumblr">$SVG('tumblr')</a>
+        </li>
+    
+    </ul>
+
+    <p class="main-footer__text">&copy; $SiteConfig.Title</p>
+
+    <div class="clearfix"></div>
 
 </footer>
 <!-- .main-footer ends -->

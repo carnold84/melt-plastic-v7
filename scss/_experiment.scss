@@ -1,0 +1,126 @@
+/* ==========================================================================
+   Experiment page classes
+   ========================================================================== */
+
+.no-js-message {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #222222;
+    display: table;
+}
+
+.js .no-js-message {
+    display: none;
+}
+
+.no-js-message__text {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    color: #555555;
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+}
+
+.experiment {
+    background-color: #111111;
+}
+
+.initialising {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: table;
+}
+
+.initialising__text {
+    font-size: 1em;
+    color: #666666;
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+}
+
+#content {
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 40px);
+    font-family: Arial, Helvetica, sans-serif;
+    display: none;
+
+    iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+}
+
+.js #content {
+    display: block;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.heads-up {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 12px;
+    color: #666666;
+    padding: 5px 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.experiment-footer {
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    bottom: 0;
+    background-color: #222222;
+    flex-direction: row;
+    flex-basis: auto;
+    display: flex;
+}
+
+.experiment-footer__title, .experiment-footer__links, .experiment-footer__version {
+    font-size: 1em;
+    line-height: 1.2em;
+    color: #666666;
+    padding: 0 0 0 20px;
+    vertical-align: middle;
+}
+
+.experiment-footer__title {
+    order: 1;
+}
+
+.experiment-footer__links {
+    order: 2;
+    flex-grow: 2;
+    padding: 0 20px 0;
+}
+
+.experiment-footer__links--link {
+    color: #999999;
+    text-decoration: none;
+    border-bottom: #999999 dotted 1px;
+}
+
+.experiment-footer__links--link:hover {
+    color: #cccccc;
+    border-bottom: #cccccc dotted 1px;
+}
+
+.experiment-footer__version {
+    order: 3;
+    padding: 0 20px 0;
+}
+
+.experiment-footer__title--highlight, .experiment-footer__links--highlight, .experiment-footer__version--highlight {
+    color: #999999;
+}

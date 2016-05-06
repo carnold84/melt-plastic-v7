@@ -1,105 +1,102 @@
 <section class="main-content">
-        
-    <!-- .container starts -->
-    <div class="container">
 
-        <header class="section-header">
+    <header class="section-header">
 
-            <h2 class="section-header__title">
-                    
-                <% if $ArchiveYear %>
-                
-                    $Title > <%t Blog.Archive 'Archive' %>:
-                    
+        <h2 class="section-header__title">
+            
+            <span class="section-header__breadcrumb">
+
+            <% if $ArchiveYear %>
+
+                <span class="bottom-level">$Title</span>
+
+                <span class="divider"> / </span>
+
+                <span class="middle-level">Archive</span>
+
+                <span class="divider"> / </span>
+
+                <span class="top-level">
+
                     <% if $ArchiveDay %>
-                    
+
                         $ArchiveDate.Nice
-                        
+
                     <% else_if $ArchiveMonth %>
-                    
+
                         $ArchiveDate.format('F, Y')
-                        
+
                     <% else %>
-                    
+
                         $ArchiveDate.format('Y')
-                        
+
                     <% end_if %>
+
+                </span>
+
+            <% else_if $CurrentTag %>
+
+                <span class="bottom-level">$Title</span>
+
+                <span class="divider"> / </span>
                     
-                <% else_if $CurrentTag %>
-                
-                    $Title > <%t Blog.Tag 'Tag' %> > $CurrentTag.Title
+                <span class="middle-level">Tag</span>
+
+                <span class="divider"> / </span>
+
+                <span class="top-level">$CurrentTag.Title</span>
+
+            <% else_if $CurrentCategory %>
+
+                <span class="bottom-level">$Title</span>
+
+                <span class="divider"> / </span>
                     
-                <% else_if $CurrentCategory %>
+                <span class="middle-level">Category</span>
+
+                <span class="divider"> / </span>
+
+                <span class="top-level">$CurrentCategory.Title</span>
+
+            <% else %>
+
+                $Title
+
+            <% end_if %>
                 
-                    $Title > <%t Blog.Category 'Category' %> > $CurrentCategory.Title
-                    
-                <% else %>
-                
-                    $Title
-                    
-                <% end_if %>
-                
-            </h2>
+            </span>
 
-            <hr class="section-hor-divider" />
-
-        </header>
-
-        <div class="row">
-
-            <div class="col-md-12 col-xs-12">
-
-                <div class="col-content">
-
-                    $Content
-
-                </div>
-
-                <div class="clearfix"></div>
-
-            </div>
-
-        </div>
-
-        <% if $PaginatedList.Exists %>
-            <% loop $PaginatedList %>
-
-                <% if $GetModulus($Pos, 3) == 0 %>
-
-                    <div class="row">
-
-                <% end_if %>
-
-                        <div class="col-md-4 col-xs-12">
-
-                            <% include PostSummary %>
-
-                        </div>
-
-                <% if $GetModulus($Pos, 3) == 2 %>
-
-                    </div>
-
-                <% end_if %>
-
-            <% end_loop %>
-            
-        <% else %>
+        </h2>
         
-            <h3 class="message">Sorry, there are no posts to view at the moment.</h3>
-            
+        <% if $Content %>
+
+            <h3 class="section-header__subtitle">$Content</h3>
+
         <% end_if %>
 
-        $Form
-        $CommentsForm
+    </header>
 
-        <% with $PaginatedList %>
-            <% include Pagination %>
-        <% end_with %>
+    <% if $PaginatedList.Exists %>
+    
+        <% loop $PaginatedList %>
 
-<% include BlogSideBar %>
+            <% include PostSummary %>
+                        
+        <% end_loop %>
 
-    </div>
-    <!-- .container ends -->
+    <% else %>
+
+        <h3 class="message">Sorry, there are no posts to view at the moment.</h3>
+
+    <% end_if %>
+
+    $Form
+    $CommentsForm
+
+    <% with $PaginatedList %>
+        <% include Pagination %>
+    <% end_with %>
+
+    <% include BlogSideBar %>
     
 </section>

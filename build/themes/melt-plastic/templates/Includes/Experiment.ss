@@ -1,9 +1,9 @@
     <div class="item with-bg">
 
-        <a href="<% if $ExternalUrl %>$ExternalUrl<% else %>$Link<% end_if %>" title="$Title">
+        <a class="item__link" href="<% if $ExternalUrl %>$ExternalUrl<% else %>$Link<% end_if %>" title="$Title">
             
             <div class="item__image">
-                $Thumb.ResponsiveSet1
+                $Thumb.SetWidth(500);
             </div>
 
             <div class="item__content">
@@ -16,7 +16,7 @@
 
                         <% loop $Tags %>
 
-                            $Title<% if $Pos != $TotalItems %>,<% end_if %>
+                            $Title<% if not Last %>,<% end_if %>
 
                         <% end_loop %>
 

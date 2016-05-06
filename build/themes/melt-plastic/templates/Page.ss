@@ -7,7 +7,7 @@
         <% base_tag %>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title><% if $MetaTitle %>$MetaTitle<% else %>$Title<% end_if %> - $SiteConfig.Title</title>
+        <title><% if $MetaTitle %>$MetaTitle<% else %>$Title<% end_if %> // $SiteConfig.Title</title>
         <meta name="description" content="$SiteConfig.Tagline">
         <meta name="viewport" content="width=device-width">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
