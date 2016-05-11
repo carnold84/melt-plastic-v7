@@ -1,0 +1,1 @@
+var main=function(){function a(){responsiveMenu.init()}return{init:a}}();$(document).ready(main.init());

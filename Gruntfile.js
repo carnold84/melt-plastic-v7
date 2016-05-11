@@ -13,32 +13,39 @@ module.exports = function(grunt) {
                     expand : true,
                     cwd : 'scss',
                     src : ['*.scss'],
-                    dest : 'build/css',
+                    dest : 'build/themes/melt-plastic/css',
                     ext : '.css'
                 }]
             }
         },
-        requirejs : {
-
-            compile : {
-                options : {
-                    baseUrl : 'src/app',
-                    paths : {
-        
-                        utilities : '../utilities',
-                        handlebars : '../libs/handlebars-v4.0.5'
-                    },
-                    name : '../app',
-                    out : 'build/js/app-built.js'
-                }
+        uglify : {
+            app : {
+                options: {
+                    compress: {
+                        drop_console: true
+                    }
+                },
+                files : [{
+                    expand : true,
+                    cwd: 'src',
+                    src: '**/*.js',
+                    dest: 'compiled/'
+                }]
+            }
+        },
+        concat: {
+            dist: {
+                src: ['compiled/responsive-menu.js', 'compiled/general.js'],
+                dest: 'build/themes/melt-plastic/javascript/app.min.js'
             }
         }
     });
 
     grunt.loadNpmTasks('grunt-contrib-sass');
-    grunt.loadNpmTasks('grunt-contrib-requirejs');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-concat');
 
     // Default task(s).
-    grunt.registerTask('default', ['sass', 'requirejs']);
+    grunt.registerTask('default', ['sass', 'uglify', 'concat']);
 
 };
