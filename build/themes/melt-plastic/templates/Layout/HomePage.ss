@@ -5,6 +5,16 @@
         <h2 class="section-header__title">Latest</h2>
 
     </header>
+
+    <% if ListPagesByType('BlogPost', 5) %>
+
+        <% loop ListPagesByType('BlogPost') %>
+
+            <% include PostSummary %>
+
+        <% end_loop %>
+
+    <% end_if %>
                 
     <% if ListPagesByType('ProjectPage', 5) %>
 
@@ -21,16 +31,6 @@
         <% loop ListPagesByType('ExperimentPage') %>
 
             <% include Experiment %>
-
-        <% end_loop %>
-
-    <% end_if %>
-
-    <% if ListPagesByType('BlogPost', 5) %>
-
-        <% loop ListPagesByType('BlogPost') %>
-
-            <% include PostSummary %>
 
         <% end_loop %>
 

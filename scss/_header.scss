@@ -22,7 +22,7 @@ $main-header-link-color: #777777;
     .svg {
         width: 34px;
         height: 34px;
-        fill: #777777;
+        fill: #999999;
         overflow: hidden;
     }
 
@@ -39,7 +39,7 @@ $main-header-link-color: #777777;
     font-size: 1.4em;
     color: $main-header-link-color;
     background-color: transparent;
-    border: $main-header-link-color solid 1px;
+    border: darken($main-header-link-color, 20) solid 1px;
     float: right;
     padding: 6px 15px;
     margin: 7px 10px 0;
@@ -225,7 +225,7 @@ $main-header-link-color: #777777;
 
     .show {
 
-        .main-nav__item {
+        .main-nav__item, .main-nav__social-links__item {
             opacity: 1;
             transform: translate3d(0, 0, 0);
         }
