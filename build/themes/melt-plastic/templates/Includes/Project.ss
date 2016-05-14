@@ -3,7 +3,7 @@
         <a class="item__link" href="$Link" title="$Title">
         
             <div class="item__image">
-                $Thumb.SetWidth(500);
+                $Thumb.SetWidth(500)
             </div>
 
             <div class="item__content">
