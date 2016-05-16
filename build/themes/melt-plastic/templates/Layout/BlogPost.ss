@@ -1,38 +1,50 @@
 <section class="main-content">
 
-    <header class="section-header">
+    <div class="container">
 
-        <h2 class="section-header__title">$Title</h2>
-        
-        <% if $Summary %>
-        
-        <h3 class="section-header__subtitle">$Summary</h3>
-        
-        <% end_if %>
+        <div class="row">
 
-    </header>
+            <div class="col-md-12 col-xs-12">
 
-    <% if $FeaturedImage %>
-        <p class="post-image">$FeaturedImage.ResponsiveSet1</p>
-    <% end_if %>
+                <header class="section-header">
 
-    <article class="blog-post__content">
+                    <h2 class="section-header__title">$Title</h2>
 
-        <div class="blog-post__body">$Content</div>
+                    <% if $Summary %>
 
-    </article>
+                    <h3 class="section-header__subtitle">$Summary</h3>
 
-    <div class="blog-post__content">
+                    <% end_if %>
 
-        <div class="blog-post__metadata">
+                </header>
 
-            <% include EntryMeta %>
+                <% if $FeaturedImage %>
+                    <p class="post-image">$FeaturedImage.ResponsiveSet1</p>
+                <% end_if %>
+
+                <article class="blog-post__content">
+
+                    <div class="blog-post__body">$Content</div>
+
+                </article>
+
+                <div class="blog-post__content">
+
+                    <div class="blog-post__metadata">
+
+                        <% include EntryMeta %>
+
+                    </div>
+
+                </div>
+
+                $Form
+                $CommentsForm
+
+            </div>
 
         </div>
-    
-    </div>
 
-    $Form
-    $CommentsForm
+    </div>
     
 </section>

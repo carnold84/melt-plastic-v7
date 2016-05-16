@@ -18,11 +18,21 @@ module.exports = function(grunt) {
                 }]
             }
         },
+        postcss: {
+            options: {
+                processors: [
+                    require('autoprefixer')({browsers: 'last 10 versions'}) // add vendor prefixes
+                ]
+            },
+            dist: {
+                src: 'build/themes/melt-plastic/css/app.css'
+            }
+        },
         uglify : {
             app : {
-                options: {
-                    compress: {
-                        drop_console: true
+                options : {
+                    compress : {
+                        drop_console : true
                     }
                 },
                 files : [{
@@ -42,10 +52,11 @@ module.exports = function(grunt) {
     });
 
     grunt.loadNpmTasks('grunt-contrib-sass');
+    grunt.loadNpmTasks('grunt-postcss');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-concat');
 
     // Default task(s).
-    grunt.registerTask('default', ['sass', 'uglify', 'concat']);
+    grunt.registerTask('default', ['sass', 'postcss', 'uglify', 'concat']);
 
 };

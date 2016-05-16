@@ -1,7 +1,6 @@
 .blog-post__content {
     width: 100%;
     margin: 0 0 20px;
-    padding: 0 30px;
     float: left;
 }
 
@@ -10,11 +9,7 @@
     color: #444444;
     padding: 25px;
     background-color: #ffffff;
-    -webkit-columns: 2 400px;
-    -moz-columns: 2 400px;
-    columns: 2 400px;
-    -webkit-column-gap: 2em;
-    -moz-column-gap: 2em;
+    columns: 3 400px;
     column-gap: 2em;
     
     h1, h2, h3, h4, h5, h6 {
@@ -61,12 +56,4 @@
 .blog-post__metadata {
     padding: 15px 25px;
     background-color: #ffffff;
-}
-
-// less than
-@media (max-width: 600px) {
-
-    .blog-post__content {
-        padding: 0 15px;
-    }
 }
