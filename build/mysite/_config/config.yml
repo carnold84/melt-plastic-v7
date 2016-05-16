@@ -9,6 +9,13 @@ After:
 # Caution: Indentation through two spaces, not tabs
 SSViewer:
   theme: 'melt-plastic'
+    
+GDBackend:
+  default_quality: 100
+  image_interlace: 1
+    
+Image:
+  force_resample: true
   
 ---
 After: 'silverstripe-responsive-images/*'
