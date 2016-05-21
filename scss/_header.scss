@@ -39,7 +39,7 @@ $main-header-link-color: #777777;
     font-size: 1.4em;
     color: $main-header-link-color;
     background-color: transparent;
-    border: darken($main-header-link-color, 20) solid 1px;
+    border: darken($main-header-link-color, 30) solid 1px;
     float: right;
     padding: 6px 15px;
     margin: 7px 10px 0;
@@ -66,7 +66,7 @@ $main-header-link-color: #777777;
     .svg {
         width: 30px;
         height: 30px;
-        fill: #aaaaaa;
+        fill: #444444;
     }
 
     &:hover {
@@ -100,6 +100,7 @@ $main-header-link-color: #777777;
     a, a:link, a:visited {
         color: $main-header-link-color;
         border-bottom: none;
+        display: block;
     }
     
     &.current {
@@ -108,9 +109,17 @@ $main-header-link-color: #777777;
             color: $global-focus-color;
         }
     }
+        
+    .svg {
+        fill: darken($main-header-link-color, 10);
+    }
 
     a:hover {
         color: $global-focus-color;
+        
+        .svg {
+            fill: $global-focus-color;
+        }
     }
 }
 
@@ -155,7 +164,7 @@ $main-header-link-color: #777777;
         top: 0;
         left: 0;
         margin: 0;
-        background-color: rgba(255, 255, 255, 0.9);
+        background-color: #1a1a1a;
         overflow: hidden;
         transform: translate3d(-100%, 0, 0);
         transition: transform 400ms cubic-bezier(0.2, 0.34, 0.43, 1.01);
@@ -173,7 +182,7 @@ $main-header-link-color: #777777;
 
     .main-nav__links-list {
         width: 100%;
-        margin: 80px 0 0;
+        margin: 60px 0 0;
         text-align: center;
         vertical-align: middle;
         display: table-cell;
@@ -191,12 +200,11 @@ $main-header-link-color: #777777;
             font-size: 1.3em;
             text-align: center;
             padding: 14px 12px;
-            margin: 0 0 5px;
-            border-top: #cccccc solid 1px;
-            border-bottom: #cccccc solid 1px;
+            margin: 0;
+            border-top: #292929 dotted 1px;
+            border-bottom: #292929 dotted 1px;
             border-left: none;
             border-right: none;
-            display: block;
         }
     }
 
