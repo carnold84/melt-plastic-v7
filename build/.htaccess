@@ -31,7 +31,7 @@ ErrorDocument 500 /assets/error-500.html
 
 	SetEnv HTTP_MOD_REWRITE On
 	RewriteEngine On
-	RewriteBase '/melt-plastic-v7-current/build'
+	RewriteBase '/melt-plastic-v7-new-js-interface/build'
 
 	
 

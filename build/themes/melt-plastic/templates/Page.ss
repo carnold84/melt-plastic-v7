@@ -4,7 +4,7 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
     <head>
-        <% base_tag %>
+        $BaseTag
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <title><% if $MetaTitle %>$MetaTitle<% else %>$Title<% end_if %> // $SiteConfig.Title</title>
@@ -23,9 +23,13 @@
     <% include Footer %>
 
     <link href="http://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700' rel='stylesheet' type='text/css'>
-    <script type="text/javascript" src="{$ThemeDir}/javascript/libs/jquery-2.1.3.min.js"></script>
-    <script type="text/javascript" src="{$ThemeDir}/javascript/app.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+    
+    <!-- DEV SETUP -->
+    <script data-main="../src/app" src="{$ThemeDir}/javascript/libs/require.js"></script>
+    
+    <!-- PRODUCTION SETUP -->
+    <!--<script data-main="javascript/app.min.js" src="{$ThemeDir}/javascript/libs/require.js"></script>-->
     
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

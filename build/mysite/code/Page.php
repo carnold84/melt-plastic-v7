@@ -10,6 +10,10 @@ class Page extends SiteTree {
     public function GetModulus($pos, $mod){
         return ($pos - 1) % $mod;
     }
+    
+    public function BaseTag() {
+        return '<base href="'. Director::baseURL() . '" />';
+    }
 
 }
 class Page_Controller extends ContentController {

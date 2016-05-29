@@ -13,6 +13,10 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
         <% require themedCSS('app') %>
+    
+        <!--[if gte IE 9]>
+        <script src="{$ThemeDir}/javascript/libs/polyfill.min.js"></script>
+        <![endif]-->
         
         <script type="text/javascript" src="{$ThemeDir}/javascript/libs/modernizr-custom.js"></script>
     </head>
@@ -20,10 +24,6 @@
 <body class="experiment">
 
     $Layout
-    
-    <!--[if gte IE 9]>
-    <script src="{$ThemeDir}/javascript/libs/polyfill.min.js"></script>
-    <![endif]-->
     
     <script type="text/javascript" src="{$ThemeDir}/javascript/experiment.js"></script>
     

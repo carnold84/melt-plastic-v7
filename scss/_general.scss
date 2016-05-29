@@ -155,6 +155,14 @@ a {
     height:100%;
 }
 
+.content-default {
+    width: 100%;
+    background-color: #ffffff;
+    margin: 0 0 40px;
+    padding: 20px 30px;
+    display: inline-block;
+}
+
 .main-content {
     width: 100%;
     padding: 0;
@@ -248,29 +256,6 @@ pre.prettyprint {
     color: #333333;
     margin: 0 0 10px;
     padding: 0;
-}
-
-.article-content .page-title {
-    margin: 0 0 10px;
-}
-
-.article-content .preface {
-    font-size: 1.2em;
-    line-height: 1.4em;
-    margin: 0 0 15px;
-}
-
-.article-content h3 {
-    font-family: 'Bree Serif', Arial, Helvetica, sans-serif;
-    font-size: 2.2em;
-    line-height: 1.3em;
-    margin: 20px 0 5px;
-}
-
-.article-content p {
-    font-size: 1em;
-    line-height: 1.6em;
-    margin: 0 0 15px;
 }
 
 .col-content {

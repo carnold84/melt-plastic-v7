@@ -2,6 +2,8 @@
 class HomePage extends Page {
     
     private static $description = 'Home page to display content from across the site.';
+}
+class HomePage_Controller extends Page_Controller {
 	
 	public function ListPagesByType($type) {
         
@@ -11,6 +13,13 @@ class HomePage extends Page {
         // return list if pages exist or false otherwise
         return $pages->count() ? $pages : false;
     }
-}
-class HomePage_Controller extends Page_Controller {
+	
+	public function ListDataByType($type) {
+        
+        // get all pages of type
+        $data = $type::get()->limit(4);
+        
+        // return list if pages exist or false otherwise
+        return $data->count() ? $data : false;
+    }
 }

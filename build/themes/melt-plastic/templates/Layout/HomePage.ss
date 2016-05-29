@@ -6,7 +6,7 @@
 
     </header>
 
-    <% if ListPagesByType('BlogPost', 5) %>
+    <% if ListPagesByType('BlogPost') %>
 
         <% loop ListPagesByType('BlogPost') %>
 
@@ -16,9 +16,9 @@
 
     <% end_if %>
                 
-    <% if ListPagesByType('ProjectPage', 5) %>
+    <% if ListDataByType('Project') %>
 
-        <% loop ListPagesByType('ProjectPage') %>
+        <% loop ListDataByType('Project') %>
 
             <% include Project %>
 
@@ -26,9 +26,9 @@
 
     <% end_if %>
 
-    <% if ListPagesByType('ExperimentPage', 5) %>
+    <% if ListDataByType('Experiment') %>
 
-        <% loop ListPagesByType('ExperimentPage') %>
+        <% loop ListDataByType('Experiment') %>
 
             <% include Experiment %>
 

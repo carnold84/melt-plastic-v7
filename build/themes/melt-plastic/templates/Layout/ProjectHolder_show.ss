@@ -3,6 +3,8 @@
     <!-- .container starts -->
     <div class="container">
 
+    <% loop $Item %>
+
         <header class="section-header">
 
             <h2 class="section-header__title">$Title</h2>
@@ -36,6 +38,8 @@
             <% end_loop %>
 
         <% end_if %>
+        
+    <% end_loop %>
 
     </div>
     <!-- .container ends -->
