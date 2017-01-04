@@ -13,6 +13,9 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
         <% require themedCSS('app') %>
+            
+        <link rel="shortcut icon" href="$ThemeDir/images/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="$ThemeDir/images/favicon.ico" type="image/x-icon">
         
         <script type="text/javascript" src="{$ThemeDir}/javascript/libs/modernizr-custom.js"></script>
     </head>
@@ -22,7 +25,6 @@
         $Layout
     <% include Footer %>
 
-    <link href="http://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700' rel='stylesheet' type='text/css'>
     <script type="text/javascript" src="{$ThemeDir}/javascript/libs/jquery-2.1.3.min.js"></script>
     <script type="text/javascript" src="{$ThemeDir}/javascript/app.min.js"></script>

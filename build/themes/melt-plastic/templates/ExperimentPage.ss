@@ -13,6 +13,9 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
         <% require themedCSS('app') %>
+            
+        <link rel="shortcut icon" href="$ThemeDir/images/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="$ThemeDir/images/favicon.ico" type="image/x-icon">
         
         <script type="text/javascript" src="{$ThemeDir}/javascript/libs/modernizr-custom.js"></script>
     </head>
